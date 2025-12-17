@@ -1,0 +1,18 @@
+# Framework Web ASGI
+fastapi
+
+# Serveur ASGI (nécessaire pour exécuter FastAPI)
+uvicorn[standard]
+
+# ORM (Object-Relational Mapper) pour la base de données
+sqlalchemy==2.*
+
+# Bibliothèque Pydantic pour la validation des données
+# (Généralement inclus avec FastAPI, mais bonne pratique de le spécifier si version 2 est requise)
+pydantic>=2.0
+
+# Driver pour la connexion à MySQL/MariaDB
+mysql-connector-python
+
+# Bibliothèque pour la gestion des données asynchrones dans SQLAlchemy (si nécessaire)
+# python-multipart

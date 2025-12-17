@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Gestion Réservations</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-content container">
+                <a href="index.html" class="logo">
+                    <span style="color: var(--accent-color)">🏨</span> Hotel
+                    Manager
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-item"> 🏠 Accueil </a>
+                    <a href="reservations.html" class="nav-item active">
+                        📅 Réservations
+                    </a>
+                    <a href="chambres.html" class="nav-item"> 🛏️ Chambres </a>
+                    <a href="clients.html" class="nav-item"> 👤 Clients </a>
+                    <a href="hotels.html" class="nav-item"> 🏢 Hôtels </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Gestion des Réservations</h1>
+
+            <div class="grid-layout">
+                <div class="card">
+                    <h2>Nouvelle Réservation</h2>
+                    <form id="reservation-form">
+                        <div class="form-group">
+                            <label>Date Début</label>
+                            <input type="date" id="date_debut" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Date Fin</label>
+                            <input type="date" id="date_fin" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select id="status">
+                                <option value="confirmee">Confirmée</option>
+                                <option value="annulee">Annulée</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ID Client</label>
+                            <input type="number" id="client_id" required />
+                        </div>
+                        <div class="form-group">
+                            <label>ID Chambre</label>
+                            <input type="number" id="chambre_id" required />
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            Réserver
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Liste des Réservations</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Dates</th>
+                                <th>Status</th>
+                                <th>Infos</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body-reservations"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>
